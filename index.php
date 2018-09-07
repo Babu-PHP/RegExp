@@ -119,3 +119,12 @@
 	}
 
 </script>
+
+<?php 
+$pattern = "/^[0-9A-Za-z\\',_+.~!@#$%^/&*]{3,64}$/"; // Invalid pattern because of '/' .
+$pattern2 = "/^[0-9A-Za-z\\',_+.~!@#$%^\/&*]{3,64}$/";// Valid pattern because of '\/'. Should '\' use before '/'
+
+$pattern3 = "/^[0-9\,]{10}$/"; // In this '\,' => at least one ',' character should be there
+
+
+?>
